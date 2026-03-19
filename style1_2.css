@@ -1,0 +1,269 @@
+/* Reset */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 0px;
+	font-family: Arial, sans-serif;
+
+	background-color: #FF420E;
+	/* roter Hintergrund */
+	color: #89DA59;
+	/* grüner Text */
+}
+
+/* Allgemeine Container */
+
+div {
+	padding: 10px;
+}
+
+.content {
+
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+
+	background-color: #F98866;
+	/* helleres Rot für Content */
+	color: #0F1B07;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* Überschriften */
+
+h1 {
+	color: #89DA59;
+}
+
+h2 {
+	color: #89DA59;
+}
+
+h3 {
+	color: #89DA59;
+}
+
+h4 {
+	color: #89DA59;
+}
+
+/* Layout */
+
+#welcome {
+	margin-top: 100px;
+}
+
+#welcome p {
+	color: #89DA59;
+}
+
+.section {
+	margin-top: 140px;
+	padding: 120px 20px;
+}
+
+/* Text */
+
+p {
+	line-height: 30px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
+}
+
+/* Navigation */
+
+.navbar {
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 1340px;
+
+	background-color: #FF420E;
+	color: #89DA59;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 15px 30px;
+
+	border-bottom: 4px solid #80BD9E;
+
+	z-index: 1000;
+}
+
+.navbar button {
+	padding-right: 80px;
+}
+
+.logo {
+	font-size: 20px;
+	font-weight: bold;
+	color: #89DA59;
+}
+
+/* Navigation Links */
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	margin: 0;
+	padding-left: 0;
+}
+
+.nav-links a {
+	color: #89DA59;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+	color: #80BD9E;
+}
+
+/* Mobile Button */
+
+.menu-toggle {
+	display: none;
+	font-size: 24px;
+	background: none;
+	border: none;
+	color: #89DA59;
+	cursor: pointer;
+}
+
+/* Welcome Section */
+
+#welcome {
+	background-image: url("./pictures/background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	min-height: 100vh;
+
+	color: #89DA59;
+}
+
+/* Kontakt Tabelle */
+
+#kontakt table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid #80BD9E;
+}
+
+#kontakt td {
+	padding: 8px;
+	border-bottom: 1px solid #89DA59;
+}
+
+/* Responsive */
+
+@media (max-width: 910px) {
+
+	body {
+		font-size: 16px;
+	}
+
+	div {
+		padding: 0;
+	}
+
+	.content {
+		padding: 0 14px 20px;
+	}
+
+	#welcome {
+		margin-top: 88px;
+		min-height: auto;
+		padding: 80px 18px 48px;
+	}
+
+	#welcome h1 {
+		font-size: 30px;
+		line-height: 1.2;
+	}
+
+	p {
+		line-height: 1.7;
+	}
+
+	.menu-toggle {
+		display: block;
+		padding: 0;
+		font-size: 28px;
+	}
+
+	.navbar {
+		left: 0;
+		max-width: none;
+		padding: 14px 16px;
+	}
+
+	.logo {
+		max-width: calc(100% - 52px);
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	.navbar button {
+		padding-right: 0;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+
+		background: #FF420E;
+		border-top: 4px solid #80BD9E;
+
+		width: 100%;
+
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding: 8px 16px 16px;
+
+		display: none;
+	}
+
+	.nav-links li {
+		width: 100%;
+	}
+
+	.nav-links a {
+		display: block;
+		padding: 10px 0;
+	}
+
+	.nav-links.active {
+		display: flex;
+	}
+
+	#kontakt td,
+	#oeffnungszeiten td,
+	#aktuelles td {
+		display: block;
+		width: 100%;
+		padding: 4px 0;
+	}
+
+	img {
+		display: block;
+	}
+}

@@ -1,0 +1,163 @@
+/* Reset */
+
+* {
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+main {
+	padding-top: 80px;
+}
+
+.section {
+	padding: 60px 20px;
+}
+
+html {
+	scroll-padding-top: 100px;
+	/* Höhe der Navbar */
+	scroll-behavior: smooth;
+}
+
+p {
+	line-height: 30px;
+	/* angenehmer Zeilenabstand */
+	word-wrap: break-word;
+	/* sehr lange Wörter umbrechen */
+	overflow-wrap: break-word;
+	white-space: normal;
+	/* erlaubt normalen Zeilenumbruch */
+}
+
+.content {
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+/* Navigation */
+
+
+.navbar {
+	position: fixed;
+	top: 0;
+	max-width: 1400px;
+	width: 100%;
+	background: #222;
+	color: white;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 15px 30px;
+
+	z-index: 1000;
+}
+
+.navbar button {
+	padding-right: 80px;
+}
+
+.logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+}
+
+.nav-links a:hover {
+	text-decoration: underline;
+}
+
+/* Mobile Button */
+
+.menu-toggle {
+	display: none;
+	font-size: 24px;
+	background: none;
+	border: none;
+	color: white;
+}
+
+/* Content */
+
+#welcome {
+	background-image: url("./pictures/background.jpg");
+	background-size: cover;
+	/* Bild füllt gesamten Bereich */
+	background-position: center;
+	/* Bild wird zentriert */
+	background-repeat: no-repeat;
+	/* nicht kacheln */
+
+	min-height: 100vh;
+	/* volle Bildschirmhöhe */
+}
+
+
+#kontakt td {
+	padding: 3px;
+	padding-right: 1px;
+	margin: 2px;
+}
+
+#kontakt table {
+	width: 100%;
+	border-collapse: collapse;
+
+
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/* Responsive */
+
+@media (max-width: 910px) {
+
+	.menu-toggle {
+		display: block;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 60px;
+		right: 0;
+		background: #222;
+		width: 200px;
+
+		flex-direction: column;
+		align-items: center;
+
+		display: none;
+	}
+
+	.nav-links.active {
+		display: flex;
+	}
+
+
+
+
+
+
+
+
+
+}
